@@ -21,7 +21,9 @@
     "paths": {
       "@/*": [
         "app/*"
-      ] // หรือใช้ src/* หากโปรเจกต์ของคุณใช้ src
+      ], // หรือใช้ src/* หากโปรเจกต์ของคุณใช้ src
+      "@/components/*": ["./components/*"],
+      "@/constants/*": ["./constants/*"]
     },
     "plugins": [
       {
