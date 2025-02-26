@@ -8,7 +8,7 @@ interface Props {
     image: string;
     title: string;
     text: string;
-    url?: string;  // ทำให้ URL เป็น optional เพื่อป้องกัน error
+    url?: string;  // ทำให้ URL เป็น optional เพื่อป้องกัน error  
 }
 
 const ProjectCard = ({ image, title, text, url = "#" }: Props) => {
@@ -30,6 +30,7 @@ const ProjectCard = ({ image, title, text, url = "#" }: Props) => {
                     initial={false}
                     animate={{ rotateY: isFlipped ? 180 : 360 }}
                     transition={{ duration: 0.6, animationDirection: 'normal' }}
+                    onClick={handleFlip}  // เรียกใช้งาน handleFlip ที่นี่
                     onAnimationComplete={() => setIsAnimating(false)}
                 >
                     {/* ด้านหน้า */}
