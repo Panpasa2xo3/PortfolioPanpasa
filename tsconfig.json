@@ -17,7 +17,7 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
-    "baseUrl": ".", // เพิ่ม baseUrl เป็นโฟลเดอร์โปรเจกต์หลัก (หรือโฟลเดอร์ที่เก็บไฟล์หลัก เช่น "src")
+    "baseUrl": "./", // เพิ่ม baseUrl เป็นโฟลเดอร์โปรเจกต์หลัก (หรือโฟลเดอร์ที่เก็บไฟล์หลัก เช่น "src")
     "paths": {
       "@/*": [
         "app/*"
