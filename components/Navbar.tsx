@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Socials } from '@/constants'
+import { Socials } from '@/constants/index'
 const Navbar = () => {
   return (
     <div className='fixed top-0 z-[40] w-full h-[100px] bg-transparent flex justify-between items-center px-10 md:px-20'>
