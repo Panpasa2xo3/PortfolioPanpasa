@@ -97,13 +97,13 @@ export const Projects = [
     title: "Expense Tracker Website",
     text: "An Expense Tracker Website helps users track income and expenses, manage budgets, and monitor spending habits.",
     src: "/ExpenseWeb.png",
-    url:"https://github.com/Panpasa2xo3/Expense-tracker", 
+    url:"https://expense-tracker-woad-two.vercel.app/", 
   },
   {
     title: "BMI Calculator Website",
     text: "A BMI Calculator Website allows users to calculate their Body Mass Index (BMI) by entering their weight and height, helping them assess whether they are within a healthy weight range.",
     src: "/BMICalculatorWeb.png",
-    url:"https://github.com/Panpasa2xo3/BMICalculator",
+    url:"https://bmi-calculator-zeta-jet.vercel.app/",
   },
   {
     title: "Panpasa Portfolio",
@@ -116,7 +116,7 @@ export const Projects = [
     title: "TicTacToe Website",
     text: "A TicTacToe Website lets users play the classic Tic-Tac-Toe game against another player or the computer, featuring a simple grid for marking X's and O's to win the game.",
     src: "/TictactoeGameWeb.png",
-    url: "https://github.com/Panpasa2xo3/TicTacToeGame",
+    url: "https://tic-tac-toe-game-livid-sigma.vercel.app/",
    
   },
 ];
