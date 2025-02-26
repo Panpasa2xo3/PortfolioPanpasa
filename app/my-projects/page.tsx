@@ -4,6 +4,7 @@ import React from 'react'
 
 const Page = () => {
   return (
+
     <div
     style={{backgroundImage: "url(/mountains.jpg)"}}
     className='w-screen h-screen flex items-center justify-center bg-center bg-cover'>
@@ -14,6 +15,7 @@ const Page = () => {
                 title={project.title}
                 text={project.text}
                 image={project.src}
+                url={project.url}
             />
         ))}
     </div>   

@@ -19,13 +19,19 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    // ตรวจสอบตัวแปรสิ่งแวดล้อมว่ามีค่าหรือไม่
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+
+    // ถ้าตัวแปรใดเป็น undefined ให้แสดงแจ้งเตือนและไม่ส่งฟอร์ม
+    if (!serviceId || !templateId || !userId) {
+      alert('❌ ข้อผิดพลาด: ตัวแปรสิ่งแวดล้อมไม่ได้ถูกตั้งค่า');
+      return;
+    }
+
     emailjs
-      .send(
-        'service_6os60aa', // ใส่ Service ID ของคุณ
-        'template_hwl0dxv', // ใส่ Template ID ของคุณ
-        formData,
-        'mQCHgE5jmI1NyyyWa' // ใช้ Public Key (User ID) ที่คุณมี
-      )
+      .send(serviceId, templateId, formData, userId)
       .then(
         (result) => {
           console.log('✅ ส่งข้อความสำเร็จ:', result.text);

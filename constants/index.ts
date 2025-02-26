@@ -1,3 +1,5 @@
+import { link } from "fs";
+import { url } from "inspector/promises";
 import { RxHome, RxPerson, RxDashboard, RxClipboard } from "react-icons/rx";
 
 export const SkillData = [
@@ -78,7 +80,7 @@ export const SkillData = [
 
 export const Socials = [
   {
-    name: "Discord",
+    name: "Instagram",
     src: "/instagram.svg",
   },
   {
@@ -86,30 +88,36 @@ export const Socials = [
     src: "/facebook.svg",
   },
   {
-    name: "Instagram",
+    name: "Discord",
     src: "/discord.svg",
   },
 ];
 export const Projects = [
   {
-    title: "Modern Nextjs Website",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    src: "/NextWebsite.png",
+    title: "Expense Tracker Website",
+    text: "An Expense Tracker Website helps users track income and expenses, manage budgets, and monitor spending habits.",
+    src: "/ExpenseWeb.png",
+    url:"https://github.com/Panpasa2xo3/Expense-tracker", 
   },
   {
-    title: "Space Themed Website",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    src: "/SpaceWebsite.png",
+    title: "BMI Calculator Website",
+    text: "A BMI Calculator Website allows users to calculate their Body Mass Index (BMI) by entering their weight and height, helping them assess whether they are within a healthy weight range.",
+    src: "/BMICalculatorWeb.png",
+    url:"https://github.com/Panpasa2xo3/BMICalculator",
   },
   {
-    title: "Modern Nextjs Portfolio",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    src: "/WebPortfolio.png",
+    title: "Panpasa Portfolio",
+    text: "Panpasa Portfolio is a personal website designed to showcase skills, projects, and achievements. It provides an overview of the individual's work, experience, and expertise, helping others learn more about their professional background and abilities.",
+    src: "/panpsawebport.png",
+    url:"https://github.com/Panpasa2xo3/PortfolioPanpasa",
+    
   },
   {
-    title: "Matrix themed Website",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.",
-    src: "/Matrix.png",
+    title: "TicTacToe Website",
+    text: "A TicTacToe Website lets users play the classic Tic-Tac-Toe game against another player or the computer, featuring a simple grid for marking X's and O's to win the game.",
+    src: "/TictactoeGameWeb.png",
+    url: "https://github.com/Panpasa2xo3/TicTacToeGame",
+   
   },
 ];
 
