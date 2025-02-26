@@ -1,27 +1,34 @@
-"use client"
-import React, { useEffect } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import { SkillData } from '@/constants'
-import Image from 'next/image'
-import { Autoplay } from 'swiper/modules'
+"use client";
+import React, { useMemo } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { SkillData } from "@/constants/index"; // ✅ แก้ import ให้ถูกต้อง
+import Image from "next/image";
+import { Autoplay } from "swiper/modules";
+
+// ✅ เพิ่ม TypeScript type ให้ SkillData
+interface Skill {
+  name: string;
+  Image: string;
+  width: number;
+  height: number;
+}
 
 const Page = () => {
-  // กรองเฉพาะสกิลที่ต้องการ
-  const filteredSkills = [
-    ...SkillData.filter(skill => 
-      ["Html 5", "Css", "JavaScript", "Next js 13"].includes(skill.name)
-    ),
-    { name: "C++", Image: "/cpp.png", width: 80, height: 80 },
-    { name: "MySQL", Image: "/mysql.png", width: 80, height: 80 }
-  ];
-
-  useEffect(() => {
-    console.log("Filtered Skills:", filteredSkills);
-  }, []);
+  // ✅ ใช้ useMemo แทน useEffect เพื่อลด re-render
+  const filteredSkills: Skill[] = useMemo(
+    () => [
+      ...SkillData.filter((skill) =>
+        ["Html 5", "Css", "JavaScript", "Next js 13"].includes(skill.name)
+      ),
+      { name: "C++", Image: "/cpp.png", width: 80, height: 80 },
+      { name: "MySQL", Image: "/mysql.png", width: 80, height: 80 },
+    ],
+    []
+  );
 
   return (
-    <div 
+    <div
       style={{ backgroundImage: "url(/bg-2.jpg)" }}
       className="h-screen w-screen flex items-center justify-center bg-cover bg-center"
     >
@@ -39,13 +46,13 @@ const Page = () => {
           </p>
         </div>
 
-        {/* ✅ Swiper แรก */}
+        {/* ✅ Swiper แรก (ปกติ) */}
         <Swiper
           slidesPerView={5}
           loop={true}
           autoplay={{
             delay: 0,
-            disableOnInteraction: false
+            disableOnInteraction: false,
           }}
           speed={5000}
           modules={[Autoplay]}
@@ -58,6 +65,7 @@ const Page = () => {
                 alt={skill.name}
                 width={skill.width}
                 height={skill.height}
+                unoptimized // ✅ ป้องกันปัญหาโหลดภาพผิดพลาด
               />
             </SwiperSlide>
           ))}
@@ -70,7 +78,7 @@ const Page = () => {
           autoplay={{
             delay: 0,
             disableOnInteraction: false,
-            reverseDirection: true
+            reverseDirection: true,
           }}
           speed={5000}
           modules={[Autoplay]}
@@ -83,13 +91,14 @@ const Page = () => {
                 alt={skill.name}
                 width={skill.width}
                 height={skill.height}
+                unoptimized
               />
             </SwiperSlide>
           ))}
         </Swiper>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Page
+export default Page;

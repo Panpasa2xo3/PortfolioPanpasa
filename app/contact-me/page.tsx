@@ -1,5 +1,4 @@
 import ContactForm from 'components/ContactForm'
-import { url } from 'inspector'
 import React from 'react'
 
 const Page = () => {

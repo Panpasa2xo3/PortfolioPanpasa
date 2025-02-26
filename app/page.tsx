@@ -2,7 +2,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 import { Typewriter } from "react-simple-typewriter";
 
 export default function Home() {
@@ -84,7 +83,7 @@ export default function Home() {
       </div>
 
       <div className="absolute bottom-0 z-[5] w-full h-auto">
-        <Image src="/tree.webp" alt="trees" width={2000} height={2000} className="w-full h-full" />
+        <Image src="/trees.webp" alt="trees" width={2000} height={2000} className="w-full h-full" />
       </div>
 
       <Image src="/stars.png" alt="stars" height={300} width={300} className="absolute top-10 left-0 z-[10]" />
